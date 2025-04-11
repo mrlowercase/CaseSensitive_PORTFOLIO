@@ -1,0 +1,261 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 10px 0;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color:#1976d2;
+  text-decoration: underline;
+}
+.hero {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 4px;
+}
+
+.hero h2{
+  font-size: 45px;
+}
+button {
+  background: #283593;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  padding: 15px 30px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background: #1976d2;
+}
+
+.services {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+  width: 29%;
+  text-align: center;
+  transition: transform 0.3s;
+  
+
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1.1em;
+    color: black;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #1976d2 ;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack header items vertically */
+      align-items: center;
+    }
+    
+    nav ul {
+      flex-direction: column; /* Stack navigation items vertically */
+      align-items: center; /* Center the navigation */
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    nav ul li {
+      margin-left: 0; /* Remove left margin for vertical layout */
+      margin-bottom: 10px; /* Add spacing between items */
+    }
+}  
+
+
+.workages, .portfolio {
+  background-color: black;
+  padding: 40px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  max-width: 1200px;
+  
+}
+
+.cards, .portfolio-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.card, .portfolio-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+  width: 29%;
+  text-align: center;
+  transition: transform 0.3s;
+
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.portfolio-card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3, .portfolio-card h3 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: clamp(18px, 2.5vw, 24px);
+  
+}
+
+.card p, .portfolio-card p {
+  font-size: clamp(14px, 1.2vw, 16px);
+  text-align: center;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.img-container img {
+  max-width: 340px;
+  height: 267px;
+  margin: 0px;
+  
+  border-radius: 10px;
+}
+
+.tier-heading {
+  font-size: 24px;
+  margin: 2rem 0 1rem;
+  text-align: center;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.service-card.premium {
+  border-left: 6px solid silver;
+}
+
+.service-card.pro {
+  border-left: 6px solid #1976d2;
+}
+
+
+@media (max-width: 868px) {
+ 
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-cards {
+    flex-direction: column;
+  }
+  
+  .portfolio-card {
+    width: 92%;
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+  
+  .service-card.premium {
+    width: 92%;
+    margin-bottom: 20px;
+  }
+  .service-card.pro {
+    width: 92%;
+    margin-bottom: 20px;
+  }
+  
+}
